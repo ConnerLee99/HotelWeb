@@ -1,0 +1,154 @@
+/* Global Reset and Body Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin: 1rem;
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .logo-title {
+        justify-content: center;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+}
+
+header h1 {
+    display: flex;
+    color: #D25014;
+    font-weight: bold;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+#header-logo {
+    height: auto;
+    max-height: 50px;
+    width: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: #D25014;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 15px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 0;
+}
+
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #495057;
+}
+
+form {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    border-radius: 5px;
+    max-width: 100%;
+    margin: auto;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="password"] {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+}
+
+button[type="submit"],
+button[type="button"] {
+    background-color: #D25014;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-dropdown {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+#destination-input:focus {
+    border-color: #333;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content div {
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.dropdown-content div:hover {
+    background-color: #ddd;
+}
+
+#destination-input:focus+.dropdown-content {
+    display: block;
+}
+
+
+footer {
+    background: #D25014;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}

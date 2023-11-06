@@ -1,0 +1,164 @@
+header {
+    padding: 1rem;
+    background: #333;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    align-items: center;
+}
+
+#header-title,
+h1 {
+    color: #D25014;
+    /* Use hex for consistency */
+    font-weight: bold;
+    /* Increase font weight */
+}
+
+#header-title,
+#header-logo {
+    height: 50px;
+}
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: #D25014;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 15px;
+    /* Add padding to links */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 0;
+    /* Remove margin */
+}
+
+form {
+    display: flex;           /* Horizontal alignment */
+    align-items: center;     /* Vertically align elements */
+    gap: 10px;               /* Space between elements */
+    flex-wrap: nowrap;       /* Do not wrap elements */
+    background-color: #f4f4f4;
+    padding: 2rem;
+    border-radius: 5px;
+    max-width: 100%;
+    margin: auto;
+}
+
+label {
+    margin-right: 10px;      /* Space between label and input */
+}
+
+input[type="text"],
+input[type="date"] {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease-in-out;
+    /* Add transition */
+}
+#myForm input[type="submit"] {
+    margin-top: 10px;   /* Add spacing between input fields and submit button */
+    display: block;     /* Make the button a block element */
+    margin-left: auto;  /* Center the button horizontally */
+    margin-right: auto; /* Center the button horizontally */
+}
+
+/* Input focus effect */
+input[type="text"]:focus,
+input[type="date"]:focus {
+    border-color: #333;
+    height: 60px;
+    /* Change border color on focus */
+}
+/* Footer Styling */
+footer {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Global Reset and Body Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Content Styling */
+.content {
+    flex: 1;
+    padding: 1rem;
+    overflow: auto;
+}
+
+/* Custom Dropdown Styling */
+.custom-dropdown {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 10px;  /* Spacing between input and next element */
+}
+
+#destination-input {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#destination-input:focus {
+    border-color: #333;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content div {
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.dropdown-content div:hover {
+    background-color: #ddd;
+}
+
+#destination-input:focus + .dropdown-content {
+    display: block;
+}
