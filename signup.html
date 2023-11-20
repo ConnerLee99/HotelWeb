@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+    </style>
+</head>
+
+
+<body>
+
+    <header>
+        <div class="logo-title">
+            <img src="Logo.png" alt="Just Booking" id="header-logo">
+            <h1>Just Booking</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="login.html">Log in</a>
+        </nav>
+    </header>
+    <h2 id="loginh2"> Sign up </h2>
+
+    <form id="signup-form" onsubmit="return validateForm();">
+        <input type="text" placeholder="Username" required>
+        <input type="text" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+        <div id="login_signup">
+            <button type="submit">Sign up</button>
+        </div>
+        <div id="message"></div>
+    </form>
+    
+    
+    <script>
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+    
+            var messageElement = document.getElementById("message");
+    
+            if (password !== confirmPassword) {
+                messageElement.textContent = "Passwords do not match. Please try again.";
+                messageElement.style.color = "red";
+                return false; // Prevent form submission
+            } else {
+                messageElement.textContent = "Passwords match!";
+                messageElement.style.color = "green";
+                return true; // Allow form submission
+            }
+        }
+    </script>
+    
+    
+    
+    
+    
+    <footer class="footer">
+        <p>&copy; 2023 Just Booking</p>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>

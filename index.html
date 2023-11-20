@@ -7,84 +7,8 @@
     <title>Just Booking</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        p {
+   
 
-        margin-top: 15px;
-        }
-
-        .horizontal-fields {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-
-        #rooms {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .roomimg {
-            max-height: 40vh;
-            width: auto;
-            border-radius: 5px;
-            box-shadow: 0 2px 8px rgba(0.1, 0.1, 0.1, 0.1);
-            transition: transform 0.1s;
-
-        }
-
-        .roomimg:hover {
-            transform: scale(1.05);
-        }
-
-        #about {
-            padding-top: 20%;
-            margin-left: 10%;
-            margin-right: 10%;
-        }
-
-
-        #contact {
-            padding-top: 20%;
-        }
-
-        @media (max-width: 768px) {
-            #rooms {
-                gap: 1rem;
-                margin-top: 2rem;
-                display: flex;
-                flex-direction: column;
-            }
-
-            .roomimg {
-                margin: auto;
-                max-height: 40vh;
-                max-width: 100%;
-                height: auto;
-                display: block;
-                border-radius: 5px;
-                box-shadow: 0 2px 8px rgba(0.1, 0.1, 0.1, 0.1);
-                transition: transform 0.1s;
-            }
-
-
-            .horizontal-fields {
-                display: block;
-                align-items: center;
-                gap: 10px;
-                margin-bottom: 10px;
-            }
-
-            .roomimg:hover {
-                transform: scale(1);
-            }
-
-            img {
-                background-color: white;
-            }
-        }
     </style>
 </head>
 
@@ -96,9 +20,9 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="hotel.html">Home</a></li>
+                <li><a href="hotel.html#about">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li><a href="login.html">Log in</a></li>
             </ul>
         </nav>
@@ -107,7 +31,7 @@
 
     <section id="booking">
         <h2>Book Your Stay</h2>
-        <form id="bookingForm">
+        <form id="booking-form" action="search.html">
             <div class="horizontal-fields">
                 <div class="custom-dropdown">
                     <input type="text" id="destination-input" placeholder="Choose a destination..." required>
@@ -134,7 +58,7 @@
                 <input type="date" id="checkout" name="checkout" placeholder="Check out..." required>
                 <input type="number" id="guest-input" min="1" max="10" placeholder="Number of Guests..." required>
             </div>
-            <button type="submit">Book Now</button>
+            <button type="submit" >Search</button>
         </form>
     </section>
     <h2>Simple as that!</h2>
@@ -148,27 +72,27 @@
 
     <section id="about">
         <h2>About Us</h2>
-        <p>
+        <p class="about-us">
             At Just Booking, we understand that finding the perfect hotel is much more than just a quest for a place
             to
             rest. It’s about securing a space that feels like a second home, no matter where in the world you may find
             yourself. With our carefully curated selection of hotels, we ensure that every traveler, be it solo
             explorers, couples, families, or groups, finds a haven that resonates with their needs and expectations.
         </p>
-        <p>
+        <p class="about-us">
             Our journey began with a simple belief: every traveler deserves an effortless and delightful booking
             experience coupled with an unforgettable stay. With this vision in mind, we set out to create Just Booking -
             a platform that brings together the finest assortment of hotels that are not only luxurious and
             aesthetically pleasing but also exude warmth and friendliness.
         </p>
-        <p>
+        <p class="about-us">
             Quality Assurance:
             Quality is the cornerstone of our offerings. Each hotel listed on Just Booking undergoes a rigorous
             selection process. Our team meticulously reviews each property, evaluating various aspects such as
             cleanliness, ambiance, amenities, and hospitality standards. We pay close attention to guest reviews and
             feedback, ensuring that the hotels on our platform consistently maintain high standards of service.
         </p>
-        <p>
+        <p class="about-us">
             Tailored Experiences:
             What makes Just Booking unique is our dedication to providing personalized experiences. Our platform is
             designed to cater to the diverse needs and preferences of our users. From cozy boutique hotels, majestic
@@ -176,37 +100,33 @@
             you to filter and find accommodations that align with your preferences, ensuring that you find exactly what
             you’re looking for with ease and convenience.
         </p>
-        <p>
+        <p class="about-us">
             Happy to Help:
             We take immense pride in our customer service. Our dedicated team is always eager to assist you in making
             informed decisions. Whether you need help with choosing the right hotel, understanding the amenities, or
             have any other queries, we are here to guide you every step of the way. At Just Booking, your satisfaction
             is our utmost priority.
         </p>
-        <p>
+        <p class="about-us">
             A Global Community:
             Our platform brings together a community of travelers and hoteliers from across the globe. We believe in
             fostering connections and enriching experiences. By choosing Just Booking, you’re not just securing a room,
             but you’re becoming a part of a community that cherishes memorable experiences.
         </p>
-        <p>
+        <p class="about-us">
             Sustainable Choices:
             At Just Booking, we are conscious of our impact on the environment and communities. We promote hotels that
             are committed to sustainable practices and responsible tourism. By choosing from our selection, you are
             contributing to a travel culture that respects and nurtures its surroundings.
         </p>
-        <p>
+        <p class="about-us">
             Embark on a seamless journey of discovering and booking hotels that are more than just a place to sleep.
             With Just Booking, immerse yourself in experiences that are enriched with quality, comfort, friendliness,
             and care. We are thrilled to be your companions in this journey and look forward to helping you create
             unforgettable memories.</p>
     </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: info@justbooking.com</p>
-        <p>Phone: 0161 764 7676</p>
-    </section>
+    
 
     <footer class="footer">
         <p>&copy; 2023 Just Booking</p>
