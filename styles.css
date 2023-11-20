@@ -383,7 +383,9 @@ a {
     header {
         flex-direction: column;
     }
-
+    #chosen-hotel {
+        width: 90%;
+    }
     .logo-title {
         justify-content: center;
     }
@@ -441,19 +443,22 @@ a {
     #hotel-options {
         flex-direction: column;
         align-items: center;
+        min-width: 50%;
     }
 
     .option-backgrounds {
-        width: 50%;
-        margin-bottom: 20px;
-        background-color: #ffffff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        padding: 10px;
-        box-sizing: border-box;
-        border-radius: 10px 10px 10px 10px;
+      display: flex;
+      flex-direction: column;
+      margin: 0%;
+      margin-bottom: 10px;
+      max-width: 70%;
+      
+
     }
     #hotel-info{
         min-width: 300px;
+        margin: auto;
+        padding: 0%;
     }
     #payment-border {
         padding: 10px;
@@ -464,5 +469,9 @@ a {
         border-radius: 40px;
         min-width: 50%;
     
+    }
+    #payment-form {
+        padding: 0%;
+
     }
 }
