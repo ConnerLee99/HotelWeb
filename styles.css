@@ -233,13 +233,11 @@ button[type="button"] {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
-
 }
 
 #spacer {
-    flex: 1; 
-    padding: 20px; 
+    flex: 1;
+    padding: 20px;
 }
 
 #hotel-options {
@@ -252,24 +250,25 @@ button[type="button"] {
 }
 
 .option-backgrounds {
-    width: 30%;
-    margin-bottom: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 10px 10px 10px 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 30%;
+    margin-bottom: 10px;
 }
 
 #hotel-name {
     text-align: left;
 }
 
-.first-choice {
+.hotel-choice {
     width: 100%;
     height: auto;
     margin-top: 10px;
     text-align: center;
+    min-width: 30%;
 }
 
 .hotel-info {
@@ -291,6 +290,61 @@ button[type="button"] {
 
 /*search end*/
 
+#payment{
+    background-color: #D25014;
+    padding: 2rem;
+    border-radius: 5px;
+    max-width: 100%;
+    margin: auto;
+    padding-bottom: 0%;
+
+}
+
+#chosen-hotel {
+    width: 50%;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px 10px 10px 10px;
+    margin: auto;
+}
+
+#payment-button{
+    background-color: #ffffff;
+    color: #D25014;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+#payment-border {
+    padding: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: #D25014;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    min-width: 300px;
+
+}
+
+#payment-form {
+    display: flex;
+    max-width: 400px;
+    margin: auto;
+}
+
+#payment-title {
+    padding-top: 50px;
+}
+
 footer {
     background: #D25014;
     color: white;
@@ -310,6 +364,7 @@ a {
         display: flex;
         flex-direction: column;
     }
+
     .roomimg {
         margin: auto;
         max-height: 40vh;
@@ -396,5 +451,16 @@ a {
         padding: 10px;
         box-sizing: border-box;
         border-radius: 10px 10px 10px 10px;
+    }
+
+    #payment-border {
+        padding: 10px;
+        margin-left: 20%;
+        margin-right: 20%;
+        background-color: #D25014;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 40px;
+        min-width: 50%;
+    
     }
 }
