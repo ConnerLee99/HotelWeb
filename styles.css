@@ -452,7 +452,9 @@ a {
         box-sizing: border-box;
         border-radius: 10px 10px 10px 10px;
     }
-
+    #hotel-info{
+        min-width: 300px;
+    }
     #payment-border {
         padding: 10px;
         margin-left: 20%;
