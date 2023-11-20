@@ -233,6 +233,13 @@ button[type="button"] {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+
+}
+
+#spacer {
+    flex: 1; 
+    padding: 20px; 
 }
 
 #hotel-options {
