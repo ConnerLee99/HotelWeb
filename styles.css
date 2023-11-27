@@ -112,15 +112,7 @@ body {
 }
 
 /* Main end*/
-form {
-    background-color: #f4f4f4;
-    padding: 2rem;
-    border-radius: 5px;
-    max-width: 100%;
-    margin: auto;
-    padding-bottom: 0%;
 
-}
 
 input[type="text"],
 input[type="date"],
@@ -325,21 +317,23 @@ button[type="button"] {
 }
 
 #payment-border {
-    padding: 10px;
-    margin-left: 20%;
-    margin-right: 20%;
+    padding: 0; /* Set padding to 0 */
+    margin: 0 auto; /* Center the element horizontally */
     background-color: #D25014;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 40px;
-    min-width: 300px;
-
+    border-radius: 20px;
+    min-width: 500px;
+    max-width: 30%
 }
 
 #payment-form {
     display: flex;
     max-width: 400px;
     margin: auto;
+    padding: 10px; /* Add padding to the form if needed */
 }
+
+
 
 #payment-title {
     padding-top: 50px;
@@ -356,6 +350,38 @@ footer {
 a {
     text-decoration: none;
 }
+
+#payment-border {
+    padding: 10px; /* You can adjust the padding as needed */
+    margin: auto; /* Center the element horizontally */
+    background-color: #D25014;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: fit-content; /* Use fit-content to make the width fit around the content */
+}
+
+#payment-form {
+    max-width: 400px;
+    margin: auto;
+    padding: 10px; /* Add padding to the form if needed */
+}
+
+#chosen-hotel {
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    max-width: 100%; /* Make sure the content doesn't overflow */
+    margin: auto;
+    padding: 10px; /* You can adjust the padding as needed */
+}
+
+.hotel-choice {
+    width: 100%; /* Ensure the image doesn't overflow its container */
+}
+
+.hotel-info {
+    text-align: center;
+    margin-top: 10px; /* Add margin to separate from the image */
+}
+
 
 @media (max-width: 1340px) {
     #rooms {
@@ -468,6 +494,7 @@ a {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         border-radius: 20px;
         min-width: 50%;
+        max-width: fit-content;
     
     }
     #payment-form {

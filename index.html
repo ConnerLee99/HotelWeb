@@ -6,10 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Just Booking</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-   
-
-    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to handle the selection of a destination from the custom dropdown
+            function selectDestination(destination) {
+                document.getElementById('destination-input').value = destination;
+                toggleDropdown(); // Close the dropdown after selection (assuming you have a toggleDropdown function)
+            }
+    
+            // Add event listeners to the custom dropdown options
+            var destinationOptions = document.querySelectorAll('#destination-list div');
+            destinationOptions.forEach(function (option) {
+                option.addEventListener('click', function () {
+                    selectDestination(option.innerText.trim());
+                });
+            });
+    
+            // Rest of your existing code...
+    
+            // Function to toggle the custom dropdown
+            function toggleDropdown() {
+                var dropdown = document.getElementById('destination-list');
+                dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+            }
+    
+            // Add an event listener to the destination input for clicking (to open the dropdown)
+            document.getElementById('destination-input').addEventListener('click', toggleDropdown);
+    
+            // Add an event listener to close the dropdown if the user clicks outside of it
+            window.addEventListener('click', function (event) {
+                var dropdown = document.getElementById('destination-list');
+                if (!event.target.matches('#destination-input') && !event.target.matches('.custom-dropdown-content')) {
+                    dropdown.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    
+    
 </head>
 
 <body>

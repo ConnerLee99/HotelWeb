@@ -7,11 +7,8 @@
     <title>Just Booking</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-      
-        
     </style>
 </head>
-
 
 <body>
 
@@ -32,8 +29,11 @@
     <h2 id="loginh2"> Sign in or Create an account </h2>
 
     <form id="loginForm">
-        <input type="text" placeholder="Username" required>
-        <input type="password" placeholder="Password" required>
+        <!-- Add action and method attributes to the form -->
+        <input type="text" name="username" placeholder="Username" required>
+        <!-- Add the 'name' attribute to the input for server-side identification -->
+        <input type="password" name="password" placeholder="Password" required>
+        <!-- Add the 'name' attribute to the input for server-side identification -->
         
         <div id="login_signup">
             <button type="submit"> Log in </button>
@@ -49,30 +49,6 @@
         <p>&copy; 2023 Just Booking</p>
     </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
+
+</html>
