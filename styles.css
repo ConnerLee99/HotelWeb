@@ -111,6 +111,11 @@ body {
     padding-top: 100px;
 }
 
+#contact-form {
+    max-width: 650px;
+    margin: auto;
+}
+
 /* Main end*/
 
 
@@ -181,7 +186,7 @@ button[type="button"] {
 
 /*login*/
 #loginForm {
-
+    margin: auto;
     margin-top: 10px;
     max-width: 25%;
     min-width: 350px;
@@ -213,6 +218,7 @@ button[type="button"] {
 }
 
 #signup-form {
+    margin: auto;
     margin-top: 0%;
     max-width: 25%;
     min-width: 350px;
@@ -229,7 +235,7 @@ button[type="button"] {
 
 #spacer {
     flex: 1;
-    padding: 20px;
+    padding: 10%;
 }
 
 #hotel-options {
@@ -282,7 +288,7 @@ button[type="button"] {
 
 /*search end*/
 
-#payment{
+#payment {
     background-color: #D25014;
     padding: 2rem;
     border-radius: 5px;
@@ -303,7 +309,7 @@ button[type="button"] {
     margin: auto;
 }
 
-#payment-button{
+#payment-button {
     background-color: #ffffff;
     color: #D25014;
     padding: 10px 20px;
@@ -317,8 +323,10 @@ button[type="button"] {
 }
 
 #payment-border {
-    padding: 0; /* Set padding to 0 */
-    margin: 0 auto; /* Center the element horizontally */
+    padding: 0;
+    /* Set padding to 0 */
+    margin: 0 auto;
+    /* Center the element horizontally */
     background-color: #D25014;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
@@ -330,7 +338,8 @@ button[type="button"] {
     display: flex;
     max-width: 400px;
     margin: auto;
-    padding: 10px; /* Add padding to the form if needed */
+    padding: 10px;
+    /* Add padding to the form if needed */
 }
 
 
@@ -352,34 +361,35 @@ a {
 }
 
 #payment-border {
-    padding: 10px; /* You can adjust the padding as needed */
-    margin: auto; /* Center the element horizontally */
+    padding: 10px;
+    /* You can adjust the padding as needed */
+    margin: auto;
+    /* Center the element horizontally */
     background-color: #D25014;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
-    width: fit-content; /* Use fit-content to make the width fit around the content */
+    width: fit-content;
+    /* Use fit-content to make the width fit around the content */
 }
 
 #payment-form {
     max-width: 400px;
     margin: auto;
-    padding: 10px; /* Add padding to the form if needed */
+    padding: 10px;
+    /* Add padding to the form if needed */
 }
 
-#chosen-hotel {
-    box-sizing: border-box; /* Ensure padding and border are included in the width */
-    max-width: 100%; /* Make sure the content doesn't overflow */
-    margin: auto;
-    padding: 10px; /* You can adjust the padding as needed */
-}
+
 
 .hotel-choice {
-    width: 100%; /* Ensure the image doesn't overflow its container */
+    width: 100%;
+    /* Ensure the image doesn't overflow its container */
 }
 
 .hotel-info {
     text-align: center;
-    margin-top: 10px; /* Add margin to separate from the image */
+    margin-top: 10px;
+    /* Add margin to separate from the image */
 }
 
 
@@ -409,9 +419,12 @@ a {
     header {
         flex-direction: column;
     }
+
     #chosen-hotel {
-        width: 90%;
+        width: 50%;
+        min-width: 300px;
     }
+
     .logo-title {
         justify-content: center;
     }
@@ -473,32 +486,37 @@ a {
     }
 
     .option-backgrounds {
-      display: flex;
-      flex-direction: column;
-      margin: 0%;
-      margin-bottom: 10px;
-      max-width: 70%;
-      
+        display: flex;
+        flex-direction: column;
+        margin: 0%;
+        margin-bottom: 10px;
+        max-width: 70%;
+
 
     }
-    #hotel-info{
+
+    #hotel-info {
         min-width: 300px;
         margin: auto;
         padding: 0%;
     }
+
     #payment-border {
         padding: 10px;
-        margin-left: 20%;
-        margin-right: 20%;
         background-color: #D25014;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         border-radius: 20px;
         min-width: 50%;
         max-width: fit-content;
-    
+
     }
+
     #payment-form {
         padding: 0%;
 
+    }
+
+    h1 {
+        font-size: 20px;
     }
 }
