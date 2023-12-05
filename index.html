@@ -13,7 +13,7 @@
                 document.getElementById('destination-input').value = destination;
                 toggleDropdown(); // Close the dropdown after selection (assuming you have a toggleDropdown function)
             }
-    
+
             // Add event listeners to the custom dropdown options
             var destinationOptions = document.querySelectorAll('#destination-list div');
             destinationOptions.forEach(function (option) {
@@ -21,18 +21,14 @@
                     selectDestination(option.innerText.trim());
                 });
             });
-    
-            // Rest of your existing code...
-    
-            // Function to toggle the custom dropdown
             function toggleDropdown() {
                 var dropdown = document.getElementById('destination-list');
                 dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
             }
-    
+
             // Add an event listener to the destination input for clicking (to open the dropdown)
             document.getElementById('destination-input').addEventListener('click', toggleDropdown);
-    
+
             // Add an event listener to close the dropdown if the user clicks outside of it
             window.addEventListener('click', function (event) {
                 var dropdown = document.getElementById('destination-list');
@@ -42,8 +38,8 @@
             });
         });
     </script>
-    
-    
+
+
 </head>
 
 <body>
@@ -64,11 +60,14 @@
     </header>
 
     <section id="booking">
-        <h2>Book Your Stay</h2>
-        <form id="booking-form" action="search.html">
+        <h2 id="booking-title">Book Your Stay</h2>
+        <form id="booking-form" action="search.html" onsubmit="return validateDates();">
             <div class="horizontal-fields">
                 <div class="custom-dropdown">
+                    <div id="test">
+                    <label class="vertical-labels" for="destination-input">Destination</label>
                     <input type="text" id="destination-input" placeholder="Choose a destination..." required>
+                </div>
                     <div id="destination-list" class="dropdown-content">
                         <div> Aberdeen </div>
                         <div> Belfast </div>
@@ -88,14 +87,27 @@
                         <div> Bournemouth </div>
                     </div>
                 </div>
-                <input type="date" id="checkin" name="checkin" placeholder="Check in..." required>
-                <input type="date" id="checkout" name="checkout" placeholder="Check out..." required>
+                <div id="test">
+                <label class="vertical-abels" for="checkin">Check In</label>
+                <input type="date" id="checkin" required placeholder="Check In"">
+            </div>
+            <div id="test">
+                <label class="vertical-labels" for="checkout">Check Out</label>
+                <input type="date" id="checkout" required placeholder="Check Out">
+            </div>
+                <div id="test">
+                <label class="vertical-labels" for="guest-input">Number of Guests</label>
                 <input type="number" id="guest-input" min="1" max="10" placeholder="Number of Guests..." required>
             </div>
-            <button type="submit" >Search</button>
+            </div>
+            <button type="submit">Search</button>
         </form>
+        <div id="message"></div>
+
+
+        
     </section>
-    <h2>Simple as that!</h2>
+    <h2 id="slogan">Simple as that!</h2>
 
     <section id="rooms">
         <img src="room-left.jpg" alt="room-left" class="roomimg">
@@ -160,11 +172,29 @@
             unforgettable memories.</p>
     </section>
 
-    
+
 
     <footer class="footer">
         <p>&copy; 2023 Just Booking</p>
     </footer>
+
+    <script>
+
+        function validateDates() {
+            var checkInDate = new Date(document.getElementById('checkInDate').value);
+            var checkOutDate = new Date(document.getElementById('checkOutDate').value);
+
+            // Check if check-out date is before or same as check-in date
+            if (checkOutDate <= checkInDate) {
+                alert('Check-out date must be after the check-in date');
+                return false;
+            }
+
+            // Continue with the form submission or other actions
+            document.getElementById('bookingForm').submit();
+        }
+
+    </script>
 </body>
 
 </html>

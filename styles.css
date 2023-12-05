@@ -68,6 +68,20 @@ body {
 
 /* Main Page */
 
+#booking-title {
+    margin-top: 5%;
+    background-color: #D25014;
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px;
+}
+
+#booking-form {
+    background-color: #D25014;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0 2px 8px rgba(0.2, 0.2, 0.2, 0);
+    padding: 10px;
+}
+
 .about-us {
     margin-top: 15px;
 }
@@ -93,6 +107,31 @@ body {
     box-shadow: 0 2px 8px rgba(0.1, 0.1, 0.1, 0.1);
     transition: transform 0.1s;
 
+}
+
+#booking {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
+
+.horizontal-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 9%;
+    margin-right: 9%;
+}
+
+#test {
+    display: flex;
+    flex-direction: column;
+    min-width: 24%;
+
+}
+
+#slogan {
+    margin-top: 5%;
 }
 
 .roomimg:hover {
@@ -137,8 +176,8 @@ textarea {
 
 button[type="submit"],
 button[type="button"] {
-    background-color: #D25014;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #D25014;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -416,6 +455,18 @@ a {
 
 
 @media (max-width: 768px) {
+    .vertical-labels {
+        display: contents;
+    }
+
+    .horizontal-labels {
+        display: flex;
+        justify-content: space-between;
+        margin: 9%;
+        margin-bottom: 0%;
+        display: none;
+    }
+
     header {
         flex-direction: column;
     }
@@ -518,5 +569,16 @@ a {
 
     h1 {
         font-size: 20px;
+    }
+
+    #booking-form {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 500px;
+    }
+    #booking-title {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
