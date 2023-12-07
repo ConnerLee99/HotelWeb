@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Just Booking</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Function to handle the selection of a destination from the custom dropdown
@@ -37,6 +37,18 @@
                 }
             });
         });
+
+        function validateDates() {
+            var checkinDate = new Date(document.getElementById("checkin").value);
+            var checkoutDate = new Date(document.getElementById("checkout").value);
+
+            if (checkoutDate <= checkinDate) {
+                alert("Checkout date must be after the check-in date");
+                return false; // Prevent form submission
+            }
+
+            return true; // Allow form submission
+        }
     </script>
 
 
@@ -60,13 +72,14 @@
     </header>
 
     <section id="booking">
-        <h2 id="booking-title">Book Your Stay</h2>
+        <h2 id="booking-title">Book your next stay with us.....</h2>
+        <h3 id="booking-title2">Get the best deals on the greatest hotels across the nation</h3>
         <form id="booking-form" action="search.html" onsubmit="return validateDates();">
             <div class="horizontal-fields">
                 <div class="custom-dropdown">
-                    <div id="test">
+                    <div class="form-row">
                     <label class="vertical-labels" for="destination-input">Destination</label>
-                    <input type="text" id="destination-input" placeholder="Choose a destination..." required>
+                    <input type="text" id="destination-input" required>
                 </div>
                     <div id="destination-list" class="dropdown-content">
                         <div> Aberdeen </div>
@@ -87,27 +100,26 @@
                         <div> Bournemouth </div>
                     </div>
                 </div>
-                <div id="test">
-                <label class="vertical-abels" for="checkin">Check In</label>
-                <input type="date" id="checkin" required placeholder="Check In"">
+                <div class="form-row">
+                <label class="vertical-labels" for="checkin">Check In</label>
+                <input type="date" id="checkin" required >
             </div>
-            <div id="test">
+            <div class="form-row">
                 <label class="vertical-labels" for="checkout">Check Out</label>
-                <input type="date" id="checkout" required placeholder="Check Out">
+                <input type="date" id="checkout" required >   
             </div>
-                <div id="test">
+                <div class="form-row">
                 <label class="vertical-labels" for="guest-input">Number of Guests</label>
-                <input type="number" id="guest-input" min="1" max="10" placeholder="Number of Guests..." required>
+                <input type="number" id="guest-input" min="1" max="10" required>
             </div>
             </div>
-            <button type="submit">Search</button>
+            <button type="submit" id="search-button">Search</button>
         </form>
         <div id="message"></div>
 
 
         
     </section>
-    <h2 id="slogan">Simple as that!</h2>
 
     <section id="rooms">
         <img src="room-left.jpg" alt="room-left" class="roomimg">
@@ -178,23 +190,7 @@
         <p>&copy; 2023 Just Booking</p>
     </footer>
 
-    <script>
-
-        function validateDates() {
-            var checkInDate = new Date(document.getElementById('checkInDate').value);
-            var checkOutDate = new Date(document.getElementById('checkOutDate').value);
-
-            // Check if check-out date is before or same as check-in date
-            if (checkOutDate <= checkInDate) {
-                alert('Check-out date must be after the check-in date');
-                return false;
-            }
-
-            // Continue with the form submission or other actions
-            document.getElementById('bookingForm').submit();
-        }
-
-    </script>
+   
 </body>
 
 </html>

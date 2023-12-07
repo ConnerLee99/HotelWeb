@@ -19,6 +19,7 @@ header {
     margin-top: 10px;
 }
 
+
 h1 {
     color: #D25014;
     font-weight: bold;
@@ -66,11 +67,19 @@ body {
 }
 
 /* Main Page */
+
 #booking-title {
     margin-top: 5%;
     background-color: #D25014;
     border-radius: 10px 10px 0px 0px;
     padding: 10px;
+    text-align: left;
+}
+#booking-title2 {
+    background-color: #D25014;
+    padding: 10px;
+    text-align: left;
+    padding-bottom: 5%;
 }
 
 #booking-form {
@@ -83,8 +92,8 @@ body {
 }
 
 #search-button {
-    padding: 20px 30px;
-    font-size: larger;
+    padding: 10px 20px;
+    font-size:x-large;
 }
 
 .about-us {
@@ -102,11 +111,12 @@ body {
     display: flexbox;
     justify-content: center;
     margin-top: 2rem;
+    height: auto;
     width: auto;
 }
 
 .roomimg {
-    max-height: 35vh;
+    max-height: 40vh;
     width: auto;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0.1, 0.1, 0.1, 0.1);
@@ -118,6 +128,8 @@ body {
     margin-left: 2%;
     margin-right: 2%;
 }
+
+
 
 .horizontal-labels {
     display: flex;
@@ -148,6 +160,7 @@ body {
     padding-bottom: 5%;
 }
 
+
 #contact {
     padding-top: 100px;
 }
@@ -156,10 +169,15 @@ body {
     max-width: 650px;
     margin: auto;
 }
+
 .vertical-labels {
-    font-size: larger;
+    font-size:x-large;
+    font-weight: bold;
 }
+
 /* Main end*/
+
+#destination-input,
 input[type="text"],
 input[type="date"],
 input[type="number"],
@@ -173,10 +191,6 @@ textarea {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 5px;
     font-size: larger;
-}
-
-textarea{
-    resize: vertical;
 }
 
 button[type="submit"],
@@ -249,8 +263,8 @@ button[type="button"] {
 #signup-link {
     background-color: black;
 }
-/*login end*/
 
+/*login end*/
 /*signup*/
 #login_signup {
     display: flex;
@@ -267,8 +281,8 @@ button[type="button"] {
     max-width: 25%;
     min-width: 350px;
 }
-/*signup end*/
 
+/*signup end*/
 /*search*/
 #hotel-options {
     margin: 5%;
@@ -329,6 +343,7 @@ button[type="button"] {
     border-radius: 4px;
     cursor: pointer;
 }
+
 /*search end*/
 
 #payment {
@@ -342,7 +357,7 @@ button[type="button"] {
 }
 
 #chosen-hotel {
-    width: 75%;
+    width: 50%;
     margin-bottom: 20px;
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -365,9 +380,14 @@ button[type="button"] {
     margin-top: 10px;
 }
 
+ .horizontal-fields{
+    justify-content: center;
+ }
 #payment-border {
     padding: 0;
+    /* Set padding to 0 */
     margin: 0 auto;
+    
     background-color: #D25014;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
@@ -380,7 +400,10 @@ button[type="button"] {
     max-width: 400px;
     margin: auto;
     padding: 10px;
+    /* Add padding to the form if needed */
 }
+
+
 
 #payment-title {
     padding-top: 50px;
@@ -393,13 +416,16 @@ footer {
     text-align: center;
 }
 
+
 a {
     text-decoration: none;
 }
 
 #payment-border {
     padding: 10px;
+    /* You can adjust the padding as needed */
     margin: auto;
+    /* Center the element horizontally */
     background-color: #D25014;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
@@ -411,18 +437,24 @@ a {
     max-width: 400px;
     margin: auto;
     padding: 10px;
+    /* Add padding to the form if needed */
 }
+
+
 
 .hotel-choice {
     width: 100%;
+    /* Ensure the image doesn't overflow its container */
 }
 
 .hotel-info {
     text-align: center;
     margin-top: 10px;
+    /* Add margin to separate from the image */
 }
 
-@media (max-width: 1340px) {
+
+@media (max-width: 1455px) {
     #rooms {
         gap: 1rem;
         margin-top: 2rem;
@@ -441,6 +473,14 @@ a {
         transition: transform 0.1s;
     }
 }
+@media (max-width: 1000px) {
+
+    .vertical-labels {
+        font-size:large;
+        font-weight: bold;
+    }
+}
+
 
 @media (max-width: 768px) {
     .vertical-labels {
@@ -573,11 +613,6 @@ a {
 
     #search-button {
         margin-right: auto;
-    }
-
-    .custom-dropdown {
-        
-        max-width: 100%;
     }
 
    
